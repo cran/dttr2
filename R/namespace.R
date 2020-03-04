@@ -1,2 +1,2 @@
-#' @import checkr hms
+#' @import chk hms
 NULL

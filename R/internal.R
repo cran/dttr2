@@ -45,25 +45,32 @@ min.hms <- function(..., na.rm = FALSE) {
 }
 
 unique.hms <- function(x, incomparables = FALSE, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_floor(x)
   x[!duplicated(as.integer(x), incomparables = incomparables)]
 }
 
 daytte <- function(x, start) {
-  checkor(check_vector(start, c(1L, 12L), length = 1L),
-          check_vector(start, Sys.Date(), length = 1L))
+  chkor(chk_date(start), chk_whole_number(start))
+  if (vld_whole_number(start)) {
+    chk_range(start, c(1L, 12L))
+  }
 
-  if(!length(x)) return(x)
-  
+  if (!length(x)) {
+    return(x)
+  }
+
   dtt_year(x) <- 1972L
-  
-  if(is.integer(start)) {
+
+  if (is.integer(start)) {
     start <- dtt_date(paste("1972", start, "01", sep = "-"))
-  } else
+  } else {
     dtt_year(start) <- 1972L
-  
-  if(all(start == as.Date("1972-01-01"))) return(x)
+  }
+
+  if (all(start == as.Date("1972-01-01"))) {
+    return(x)
+  }
 
   start_in_leap <- start <= as.Date("1972-02-29")
   date_in_start <- dtt_date(x) >= start
@@ -73,17 +80,28 @@ daytte <- function(x, start) {
 }
 
 seconds_per_unit <- function(units = "seconds") {
-  check_scalar(units, .units_POSIXct)
-  
-  if(units == "seconds") return(1L)
+  chk_string(units)
+  chk_subset(units, c("seconds", "minutes", "hours", "days", "months", "years"))
+
+  if (units == "seconds") {
+    return(1L)
+  }
   x <- 60L
-  if(units == "minutes") return(as.integer(x))
+  if (units == "minutes") {
+    return(as.integer(x))
+  }
   x <- x * 60L
-  if(units == "hours") return(as.integer(x))
+  if (units == "hours") {
+    return(as.integer(x))
+  }
   x <- x * 24L
-  if(units == "days") return(as.integer(x))
+  if (units == "days") {
+    return(as.integer(x))
+  }
   x <- x * 30.41667
-  if(units == "months") return(as.integer(x))
+  if (units == "months") {
+    return(as.integer(x))
+  }
   x <- x * 12
   x
 }

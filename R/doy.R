@@ -14,13 +14,13 @@ dtt_doy <- function(x, ...) {
 
 #' @export
 dtt_doy.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   as.integer(format(x, "%j"))
 }
 
 #' @export
 dtt_doy.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   dtt_doy(dtt_date(x))
 }
 
@@ -33,12 +33,17 @@ dtt_doy.POSIXct <- function(x, ...) {
 #' @export
 #'
 #' @examples
-#' dtt_doy_to_date(3L)
+#' dtt_doy_to_date(3)
 dtt_doy_to_date <- function(x, year = 1972L) {
-  check_vector(x, c(1L, 366L, NA))
-  check_vector(year, c(-3000L, 3000L), length = c(1L, 1L, length(x)))
+  chk::chk_whole_numeric(x)
+  chk::chk_vector(x)
+  chk::chk_whole_numeric(year)
+  chk::chk_vector(year)
+  chk::chk_subset(length(year), c(1L, length(x)))
 
-  if(!length(x)) return(dtt_date(character(0)))
+  if (!length(x)) {
+    return(dtt_date(character(0)))
+  }
 
   dtt_date(paste0(year - 1, "-12-31")) + x
 }

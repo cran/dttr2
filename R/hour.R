@@ -1,5 +1,5 @@
 #' Get and Set Hour Values
-#' 
+#'
 #' Gets and sets hour values for date/time vectors.
 #'
 #' @param x A date/time vector.
@@ -13,8 +13,8 @@
 #' dtt_hour(x)
 #' dtt_hour(x) <- 01L
 #' x
-#' 
-#' x <- hms::as.hms("23:40:51")
+#'
+#' x <- hms::as_hms("23:40:51")
 #' dtt_hour(x)
 #' dtt_hour(x) <- 01L
 #' x
@@ -31,14 +31,14 @@ dtt_hour <- function(x, ...) {
 #' @describeIn dtt_hour Get integer vector of hour values for a Date vector
 #' @export
 dtt_hour.Date <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   rep(0L, length(x))
 }
 
 #' @describeIn dtt_hour Get integer vector of hour values for a POSIXct vector
 #' @export
 dtt_hour.POSIXct <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- as.POSIXlt(x, tz = dtt_tz(x))
   as.integer(x$hour)
 }
@@ -46,7 +46,7 @@ dtt_hour.POSIXct <- function(x, ...) {
 #' @describeIn dtt_hour Get integer vector of hour values for a hms vector
 #' @export
 dtt_hour.hms <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x <- dtt_time(x)
   x <- as.POSIXlt(x)
   as.integer(x$hour)
@@ -55,8 +55,13 @@ dtt_hour.hms <- function(x, ...) {
 #' @describeIn dtt_hour Set hour values for a POSIXct vector
 #' @export
 `dtt_hour<-.POSIXct` <- function(x, value) {
-  check_vector(value, c(0L, 23L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  chk_whole_numeric(value)
+  chk_subset(length(value), c(1L, length(x)))
+  chk_not_any_na(value)
+
+  if (!length(x)) {
+    return(x)
+  }
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$hour <- value
@@ -66,8 +71,13 @@ dtt_hour.hms <- function(x, ...) {
 #' @describeIn dtt_hour Set hour values for a hms vector
 #' @export
 `dtt_hour<-.hms` <- function(x, value) {
-  check_vector(value, c(0L, 23L), length = c(1L, 1L, length(x)))
-  if(!length(x)) return(x)
+  chk_whole_numeric(value)
+  chk_not_any_na(value)
+  chk_range(value, c(0L, 23L))
+  chk_subset(length(x), c(1L, length(x)))
+  if (!length(x)) {
+    return(x)
+  }
   x <- as.POSIXlt(x)
   x$hour <- value
   dtt_time(x)

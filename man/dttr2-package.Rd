@@ -6,36 +6,46 @@
 \alias{dttr2-package}
 \title{dttr2: Manipulate Dates, DateTimes and Times}
 \description{
-Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
-    Date/times are considered discrete and are floored whenever encountered.
-    Times are wrapped and time zones are maintained unless explicitly altered 
-    by the user.
+Manipulates date ('Date'), datetime ('POSIXct') and
+    time ('hms') vectors.  Date/times are considered discrete and are
+    floored whenever encountered.  Times are wrapped and time zones are
+    maintained unless explicitly altered by the user.
 
-Manipulates date (Date), datetime (POSIXct) and time (hms) vectors.
-    Date/times are considered discrete and are floored whenever encountered.
-    Times are wrapped and time zones are maintained unless explicitly altered 
-    by the user.
+Manipulates date ('Date'), datetime ('POSIXct') and
+    time ('hms') vectors.  Date/times are considered discrete and are
+    floored whenever encountered.  Times are wrapped and time zones are
+    maintained unless explicitly altered by the user.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/dttr}
-  \item Report bugs at \url{https://github.com/poissonconsulting/dttr/issues}
+  \item \url{https://github.com/poissonconsulting/dttr2}
+  \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
 }
 
 
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/dttr}
-  \item Report bugs at \url{https://github.com/poissonconsulting/dttr/issues}
+  \item \url{https://github.com/poissonconsulting/dttr2}
+  \item Report bugs at \url{https://github.com/poissonconsulting/dttr2/issues}
 }
 
 }
 \author{
 \strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (\href{https://orcid.org/0000-0002-7683-4592}{ORCID})
 
+Other contributors:
+\itemize{
+  \item Poisson Consulting [copyright holder, funder]
+}
+
 
 \strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (\href{https://orcid.org/0000-0002-7683-4592}{ORCID})
+
+Other contributors:
+\itemize{
+  \item Poisson Consulting [copyright holder, funder]
+}
 
 }
 \keyword{internal}
