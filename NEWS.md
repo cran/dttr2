@@ -1,13 +1,23 @@
-- dttr 0.1.0
+# dttr2 0.2.0
+
+- Bug fix for c.Date which in development version coerces all arguments to Date.
+- Added `dtt_date_add_time()` to add times to Dates vectors.
+- Added `dtt_diff()` to get time differences.
+- Added `dtt_set_date()` and `dtt_set_time()` to set dates and times.
+- Add `first = NULL` argument to `dtt_season()` to allow setting of first season in year.
+- `dtt_season()` now returns factor as opposed to ordered factor.
+- Added `dtt_wday()` to get weekday as a character vector.
+
+# dttr2 0.1.0
 
 - Functions now accept whole numerics where previously integers required.
 - Added `chk_time()` and `vld_time()` to check and validate that non-missing `hms::hms` scalar.
 - Soft-deprecated `check_tz()` for `chk::chk_identical(dtt_tz(x), tz)`
 
-# dttr 0.0.2
+# dttr2 0.0.2
 
 - Removed reference to missing ...parameters.
 
-# dttr 0.0.1
+# dttr2 0.0.1
 
 - Added a `NEWS.md` file to track changes to the package.

@@ -1,6 +1,6 @@
 Package: dttr2
 Title: Manipulate Dates, DateTimes and Times
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
     person("Poisson Consulting", role = c("cph", "fnd"))
@@ -15,15 +15,15 @@ BugReports: https://github.com/poissonconsulting/dttr2/issues
 Depends: R (>= 3.3)
 Imports: chk, hms, lifecycle
 Suggests: testthat, covr, rlang
-RdMacros: lifecycle
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 7.0.2
+RdMacros: lifecycle
+RoxygenNote: 7.1.0
 NeedsCompilation: no
-Packaged: 2020-03-04 03:43:53 UTC; joe
+Packaged: 2020-05-01 18:21:19 UTC; joe
 Author: Joe Thorley [aut, cre] (<https://orcid.org/0000-0002-7683-4592>),
   Poisson Consulting [cph, fnd]
 Maintainer: Joe Thorley <joe@poissonconsulting.ca>
 Repository: CRAN
-Date/Publication: 2020-03-04 05:30:02 UTC
+Date/Publication: 2020-05-01 18:50:03 UTC
