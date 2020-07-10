@@ -1,3 +1,16 @@
+# dttr2 0.3.0
+
+Added test functions
+  - `is_date()`
+  - `is_date_time()`
+  - `is_time()`
+Added get functions for default time zone.
+  - `dtt_sys_date()`
+  - `dtt_sys_date_time()`
+  - `dtt_sys_time()`
+- Added to get POSIXct object with year set to 1972.
+  - `dtt_dayte_time()`.
+
 # dttr2 0.2.0
 
 - Bug fix for c.Date which in development version coerces all arguments to Date.
