@@ -1,12 +1,13 @@
-#' Date
+#' Floor Date
 #'
 #' Coerces vectors to floored Date vectors.
 #'
+#' @inheritParams params
 #' @param x A vector.
 #' @param value A date vector.
-#' @param ... Unused.
 #'
 #' @return A floored Date vector.
+#' @family floor
 #' @export
 #'
 #' @examples
@@ -81,8 +82,9 @@ dtt_date.hms <- function(x, ...) {
     return(x)
   }
   value <- dtt_date(value)
-  if(identical(length(value), 1L))
+  if (identical(length(value), 1L)) {
     return(rep(value, length(x)))
+  }
   return(value)
 }
 

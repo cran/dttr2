@@ -2,10 +2,12 @@
 #'
 #' Gets and sets year values for date/time vectors.
 #'
-#' @param x A date/time vector.
+#' @inheritParams params
 #' @param value A integer vector of the year value(s).
-#' @param ... Unused.
+#'
 #' @return An integer vector (or the modified date/time vector).
+#' @family set date
+#' @seealso [dtt_year_decimal()]
 #' @export
 #'
 #' @examples
@@ -54,10 +56,15 @@ dtt_year.POSIXct <- function(x, ...) {
     return(x)
   }
   x <- format(x)
+  names <- names(x)
   if (identical(length(value), 1L)) {
-    return(dtt_date(sub_year(x, value)))
+    x <- dtt_date(sub_year(x, value))
+    names(x) <- names
+    return(x)
   }
-  dtt_date(mapply(FUN = sub_year, x, value))
+  x <- dtt_date(mapply(FUN = sub_year, x, value, USE.NAMES = FALSE))
+  names(x) <- names
+  x
 }
 
 #' @describeIn dtt_year Set year values for a POSIXct vector
@@ -70,8 +77,11 @@ dtt_year.POSIXct <- function(x, ...) {
   if (!length(x)) {
     return(x)
   }
+  names <- names(x)
   tz <- dtt_tz(x)
   x <- as.POSIXlt(x, tz = tz)
   x$year <- value - 1900L
-  as.POSIXct(format(x), tz = tz)
+  x <- as.POSIXct(format(x), tz = tz)
+  names(x) <- names
+  x
 }

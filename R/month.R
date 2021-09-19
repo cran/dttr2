@@ -2,10 +2,12 @@
 #'
 #' Gets and sets month values for date/time vectors.
 #'
-#' @param x A date/time vector.
+#' @inheritParams params
 #' @param value A integer vector of the month value(s).
-#' @param ... Unused.
+#'
 #' @return An integer vector (or the modified date/time vector).
+#' @family set date
+#' @seealso [dtt_month_decimal()]
 #' @export
 #'
 #' @examples
@@ -54,10 +56,15 @@ dtt_month.POSIXct <- function(x, ...) {
     return(x)
   }
   x <- format(x)
+  names <- names(x)
   if (identical(length(value), 1L)) {
-    return(dtt_date(sub_month(x, value)))
+    x <- dtt_date(sub_month(x, value))
+    names(x) <- names
+    return(x)
   }
-  dtt_date(mapply(sub_month, x, value))
+  x <- dtt_date(mapply(sub_month, x, value, USE.NAMES = FALSE))
+  names(x) <- names
+  x
 }
 
 #' @describeIn dtt_month Set month values for a POSIXct vector

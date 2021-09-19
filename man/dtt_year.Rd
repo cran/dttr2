@@ -65,3 +65,11 @@ dtt_year(x)
 dtt_year(x) <- 2022L
 x
 }
+\seealso{
+\code{\link[=dtt_year_decimal]{dtt_year_decimal()}}
+
+Other set date: 
+\code{\link{dtt_day}()},
+\code{\link{dtt_months}()}
+}
+\concept{set date}

@@ -1,13 +1,12 @@
-#' Aggregates
+#' Aggregate Date/Time
 #'
 #' Aggregates a date/time vector
 #'
 #' The possible units values are 'seconds', 'minutes', 'hours', 'days', 'months'
 #'  or 'years'.
 #'
-#' @param x A date/time vector.
-#' @param units A string of the units to aggregate by.
-#' @param ... Unused.
+#' @inheritParams params
+#'
 #' @return The floored date/time vector.
 #' @export
 #'

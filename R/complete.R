@@ -2,14 +2,11 @@
 #'
 #' Completes date/time vector.
 #'
-#' @param x A date/time vector.
-#' @param from A date/time scalar of the start.
-#' @param to A date/time vector of the end.
-#' @param units A string of the time units.
+#' @inheritParams params
 #' @param unique A flag specifying whether to only return unique values.
-#' @param sort A flag specifying whether to sort the vector.
-#' @param ... Unused.
+#'
 #' @return The completed date/time vector.
+#' @family complete
 #' @export
 #'
 #' @examples

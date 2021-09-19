@@ -1,7 +1,5 @@
-context("internal")
-
 test_that("set_class", {
-  expect_is(set_class(1, "thingy"), "thingy")
+  expect_s3_class(set_class(1, "thingy"), "thingy")
 })
 
 test_that("set_attr", {

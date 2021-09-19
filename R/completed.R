@@ -2,12 +2,11 @@
 #'
 #' Tests whether a date time is complete.
 #'
-#' @param x A date time vector
-#' @param sorted A flag indicating whether the values must be sorted.
+#' @inheritParams params
 #' @param unique A flag indicating whether the values must be unique.
-#' @param units A string of the units.
-#' @param ... Unused.
+#'
 #' @return A flag indicating whether complete.
+#' @family complete
 #' @export
 dtt_completed <- function(x, ...) {
   UseMethod("dtt_completed")

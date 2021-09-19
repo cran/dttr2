@@ -2,9 +2,8 @@
 #'
 #' Gets the week days for the locale.
 #'
-#' @param x A date/time vector.
-#' @param abbr A flag specifying whether to abbreviate the week days.
-#' @param ... Unused.
+#' @inheritParams params
+#'
 #' @return An character vector of the week days.
 #' @export
 #'
@@ -24,6 +23,6 @@ dtt_wday.default <- function(x, abbr = FALSE, ...) {
   chk_flag(abbr)
   chk_unused(...)
   x <- dtt_floor(x)
-  format <- if(abbr) "%a" else "%A"
+  format <- if (abbr) "%a" else "%A"
   format(x, format)
 }

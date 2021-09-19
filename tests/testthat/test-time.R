@@ -1,5 +1,3 @@
-context("time")
-
 test_that("time.integer", {
   expect_identical(dtt_time(integer(0)), hms::as_hms(1)[-1])
   expect_identical(dtt_time(NA_integer_), NA_hms_)
@@ -95,18 +93,28 @@ test_that("time.hms", {
 })
 
 test_that("set_time Date", {
-  expect_equal(dtt_set_time(as.Date("2001-01-01"), hms::as_hms("07:08:09")),
-               as.POSIXct("2001-01-01 07:08:09", tz = dtt_default_tz()))
-  expect_equal(dtt_set_time(as.Date(c("2001-01-01", "2003-01-03")), hms::as_hms("07:08:09")),
-               as.POSIXct(c("2001-01-01 07:08:09", "2003-01-03 07:08:09"), tz = dtt_default_tz()))
+  expect_equal(
+    dtt_set_time(as.Date("2001-01-01"), hms::as_hms("07:08:09")),
+    as.POSIXct("2001-01-01 07:08:09", tz = dtt_default_tz())
+  )
+  expect_equal(
+    dtt_set_time(as.Date(c("2001-01-01", "2003-01-03")), hms::as_hms("07:08:09")),
+    as.POSIXct(c("2001-01-01 07:08:09", "2003-01-03 07:08:09"), tz = dtt_default_tz())
+  )
 })
 
 test_that("set_time POSIXct", {
   expect_equal(dtt_set_time(as.POSIXct("2001-01-01 04:05:06"), hms::as_hms("07:08:09")),
-               as.POSIXct("2001-01-01 07:08:09"))
+    as.POSIXct("2001-01-01 07:08:09"),
+    ignore_attr = TRUE
+  )
   expect_equal(dtt_set_time(as.POSIXct(c("2001-01-01 04:05:06", "2003-01-03 04:05:06")), hms::as_hms("07:08:09")),
-               as.POSIXct(c("2001-01-01 07:08:09", "2003-01-03 07:08:09")))
-  
+    as.POSIXct(c("2001-01-01 07:08:09", "2003-01-03 07:08:09")),
+    ignore_attr = TRUE
+  )
+
   expect_equal(dtt_set_time(as.POSIXct("2001-01-01 04:05:06", tz = "Etc/GMT-7"), hms::as_hms("07:08:09")),
-               as.POSIXct("2001-01-01 07:08:09", tz = "Etc/GMT-7"))
+    as.POSIXct("2001-01-01 07:08:09", tz = "Etc/GMT-7"),
+    ignore_attr = TRUE
+  )
 })

@@ -1,11 +1,11 @@
-#' Floor
+#' Floor Date/Time
 #'
 #' Floors a date/time vector
 #'
-#' @param x A date/time vector.
-#' @param units A string of the units to floor by.
-#' @param ... Unused.
+#' @inheritParams params
+#'
 #' @return The floored date/time vector.
+#' @family floor
 #' @export
 #'
 #' @examples

@@ -1,17 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# dttr2 <img src="man/figures/logo.png" align="right" />
+
 <!-- badges: start -->
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![R build
-status](https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/dttr2/actions)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/dttr2/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/dttr2?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Tinyverse
-status](https://tinyverse.netlify.com/badge/dttr2)](https://CRAN.R-project.org/package=dttr2)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/package=dttr2)
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
@@ -86,13 +86,15 @@ actual clock time.
 
 ``` r
 time <- hms::as.hms(-3)
-#> Warning: as.hms() is deprecated, please use as_hms().
-#> This warning is displayed once per session.
+#> Warning: `as.hms()` was deprecated in hms 0.5.0.
+#> Please use `as_hms()` instead.
 time
 #> -00:00:03
 dtt_time(time)
 #> 23:59:57
 dtt_time(hms::as.hms("24:00:00"))
+#> Warning: `as.hms()` was deprecated in hms 0.5.0.
+#> Please use `as_hms()` instead.
 #> 00:00:00
 ```
 

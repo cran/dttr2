@@ -1,5 +1,3 @@
-context("season")
-
 test_that("dtt_season.Date", {
   dates <- as.Date(c(
     "2001-01-01", "2011-05-30", "2001-02-28", "2011-03-01", "2013-06-01",
@@ -49,7 +47,7 @@ test_that("dtt_season.Date", {
   )
 
   expect_length(dtt_season(dates[1][-1]), 0)
-  expect_is(dtt_season(dates[1][-1]), "factor")
+  expect_s3_class(dtt_season(dates[1][-1]), "factor")
 })
 
 test_that("dtt_season.POSIXct", {
@@ -101,15 +99,21 @@ test_that("dtt_season.POSIXct", {
   )
 
   expect_length(dtt_season(dates[1][-1]), 0)
-  expect_is(dtt_season(dates[1][-1]), "factor")
+  expect_s3_class(dtt_season(dates[1][-1]), "factor")
 })
 
 test_that("season order", {
-  expect_identical(dtt_season(as.Date(paste("2000", c(1,4,8,12), "01", sep = "-")),
-             start = c(Summer = 6L, Winter = 11L)),
-             structure(c(1L, 1L, 2L, 1L), .Label = c("Winter", "Summer"), class = "factor"))
-  
-  expect_identical(dtt_season(as.Date(paste("2000", c(1,4,8,12), "01", sep = "-")),
-             start = c(Summer = 6L, Winter = 11L), first = "Summer"),
-  structure(c(2L, 2L, 1L, 2L), .Label = c("Summer", "Winter"), class = "factor"))
+  expect_identical(
+    dtt_season(as.Date(paste("2000", c(1, 4, 8, 12), "01", sep = "-")),
+      start = c(Summer = 6L, Winter = 11L)
+    ),
+    structure(c(1L, 1L, 2L, 1L), .Label = c("Winter", "Summer"), class = "factor")
+  )
+
+  expect_identical(
+    dtt_season(as.Date(paste("2000", c(1, 4, 8, 12), "01", sep = "-")),
+      start = c(Summer = 6L, Winter = 11L), first = "Summer"
+    ),
+    structure(c(2L, 2L, 1L, 2L), .Label = c("Summer", "Winter"), class = "factor")
+  )
 })

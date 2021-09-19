@@ -4,12 +4,8 @@
 #' from and to are first floored and then a sequence is created by units.
 #' If length_out is defined then that number of units are added to from.
 #'
-#' @param from A date/time scalar of the start.
-#' @param to A date/time scalar of the end.
-#' @param units A string of the time units.
-#' @param length_out An integer of the number of units from from.
-#' @param wrap A flag specifying whether to wrap hms vectors from 23:59:59 to 00:00:00
-#' @param ... Unused
+#' @inheritParams params
+#'
 #' @return The date/time vector.
 #' @export
 #'

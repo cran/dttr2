@@ -65,3 +65,11 @@ dtt_day(x)
 dtt_day(x) <- 27L
 x
 }
+\seealso{
+\code{\link[=dtt_day_decimal]{dtt_day_decimal()}}
+
+Other set date: 
+\code{\link{dtt_months}()},
+\code{\link{dtt_years}()}
+}
+\concept{set date}

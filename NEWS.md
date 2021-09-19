@@ -1,3 +1,22 @@
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+
+# dttr2 0.4.0
+
+- Added 
+  - `dtt_decade()`
+  - `dtt_days_in_month()`
+  - `dtt_days_in_year()`
+  - `dtt_month_decimal()`, 
+  - `dtt_year_decimal.Date()`
+  - `dtt_day_decimal()`, 
+  - `dtt_doy_decimal()`, 
+  - `dtt_hour_decimal()`
+  - `dtt_minute_decimal()`
+  - `dtt_leap_year()`
+
+- Fixed 
+  - `dtt_adjust_units()` so accepts fractional values.
+
 # dttr2 0.3.0
 
 Added test functions

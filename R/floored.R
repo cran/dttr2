@@ -1,10 +1,12 @@
-#' Floored
+#' Test Floored
 #'
 #' Test whether a date time vector is floored.
+#'
+#' @inheritParams params
 #' @param x A Date, POSIXct or hms vector.
-#' @param units A string of the time units to floor by.
-#' @param ... Unused.
+#'
 #' @return A flag indicating whether floored.
+#' @family floor
 #' @export
 #'
 #' @examples

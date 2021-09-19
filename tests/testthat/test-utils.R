@@ -1,5 +1,3 @@
-context("utils")
-
 test_that("units_per_unit", {
   expect_identical(dtt_units_per_unit(), 86400)
   expect_identical(dtt_units_per_unit("hours"), 24)
@@ -11,6 +9,9 @@ test_that("adjust_units", {
   expect_identical(dtt_adjust_units(1), 1)
   expect_identical(dtt_adjust_units(1, "minutes"), 60)
   expect_identical(dtt_adjust_units(1, to = "minutes"), 1 / 60)
+  expect_identical(dtt_adjust_units(1L, to = "minutes"), 1 / 60)
+  expect_identical(dtt_adjust_units(1.12, "minutes"), 67.2)
+  expect_identical(dtt_adjust_units(c(1, 1.12), "minutes"), c(60, 67.2))
 })
 
 test_that("NA", {
@@ -26,7 +27,7 @@ test_that("NA", {
 })
 
 test_that("c.POSIXct", {
-  expect_equal(c(as.POSIXct("2001-01-01")), as.POSIXct("2001-01-01"))
+  expect_equal(c(as.POSIXct("2001-01-01")), as.POSIXct("2001-01-01"), ignore_attr = TRUE)
 })
 
 test_that("c.hms", {

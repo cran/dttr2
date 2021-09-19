@@ -1,14 +1,12 @@
-#' Add Units
+#' Add Time Units
 #'
 #' Add time units to a date time vector.
 #'
-#' @param x A date time vector.
-#' @param units A string of the units.
-#' @param n An integer of the number of units.
-#' @param ... Unused.
+#' @inheritParams params
 #'
 #' @return The modified date time vector.
 #' @seealso [dtt_subtract_units()]
+#' @family add
 #' @export
 #'
 #' @examples
@@ -77,7 +75,7 @@ dtt_add_years.default <- function(x, n = 1L, ...) {
     return(x)
   }
   x[is_na] <- x[!is_na][1]
-
+  
   dtt_year(x) <- dtt_year(x) + n
 
   is.na(x[is_na]) <- TRUE
