@@ -18,9 +18,9 @@ dtt_date(x, ...)
 
 dtt_date(x) <- value
 
-\method{dtt_date}{integer}(x, ...)
+\method{dtt_date}{integer}(x, origin = as.Date("1970-01-01"), ...)
 
-\method{dtt_date}{double}(x, ...)
+\method{dtt_date}{double}(x, origin = as.Date("1970-01-01"), ...)
 
 \method{dtt_date}{character}(x, ...)
 
@@ -42,6 +42,8 @@ dtt_set_date(x, value)
 \item{...}{Unused.}
 
 \item{value}{A date vector.}
+
+\item{origin}{Origin date.}
 }
 \value{
 A floored Date vector.
@@ -51,23 +53,26 @@ Coerces vectors to floored Date vectors.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{integer}: Coerce integer vector to a floored Date vector
+\item \code{dtt_date(integer)}: Coerce integer vector to a floored Date vector
 
-\item \code{double}: Coerce double vector to a floored Date vector
+\item \code{dtt_date(double)}: Coerce double vector to a floored Date vector
 
-\item \code{character}: Coerce character vector to a floored Date vector
+\item \code{dtt_date(character)}: Coerce character vector to a floored Date vector
 
-\item \code{Date}: Coerce Date vector to a floored Date vector
+\item \code{dtt_date(Date)}: Coerce Date vector to a floored Date vector
 
-\item \code{POSIXct}: Coerce POSIXct vector to a floored Date vector
+\item \code{dtt_date(POSIXct)}: Coerce POSIXct vector to a floored Date vector
 
-\item \code{hms}: Coerce hms vector to a floored Date vector
+\item \code{dtt_date(hms)}: Coerce hms vector to a floored Date vector
 
-\item \code{Date}: Set date values for a Date vector
-
-\item \code{POSIXct}: Set date values for a POSIXct vector
 }}
+\section{Functions}{
+\itemize{
+\item \code{dtt_date(Date) <- value}: Set date values for a Date vector
 
+\item \code{dtt_date(POSIXct) <- value}: Set date values for a POSIXct vector
+
+}}
 \examples{
 dtt_date(1L)
 dtt_date(-1)
@@ -80,6 +85,7 @@ dtt_date(hms::as_hms("24:00:00"))
 \seealso{
 Other floor: 
 \code{\link{dtt_date_time}()},
+\code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_floored}()},
 \code{\link{dtt_floor}()},
 \code{\link{dtt_set_time}()}

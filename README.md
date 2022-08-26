@@ -1,15 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# dttr2 <img src="man/figures/logo.png" align="right" />
+# dttr2 <img src="man/figures/logo.png" style="float: right;" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R-CMD-check](https://github.com/poissonconsulting/dttr2/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/dttr2/actions)
-[![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/dttr2/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/dttr2?branch=master)
+[![R-CMD-check](https://github.com/poissonconsulting/dttr2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/dttr2/actions/workflows/R-CMD-check.yaml)
+[![codecov](https://codecov.io/gh/poissonconsulting/dttr2/branch/main/graph/badge.svg?token=L8GpqAVzaP)](https://app.codecov.io/gh/poissonconsulting/dttr2)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CRAN
@@ -17,7 +16,7 @@ status](https://www.r-pkg.org/badges/version/dttr2)](https://cran.r-project.org/
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/dttr2)
 <!-- badges: end -->
 
-# dttr2
+## Introduction
 
 `dttr2` (Dates, Times and dateTimes in R) is an R package to perform
 simple manipulations on date (Date), datetime (POSIXct) and time (hms)

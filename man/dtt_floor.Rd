@@ -31,13 +31,13 @@ Floors a date/time vector
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{Date}: Floor a Date vector
+\item \code{dtt_floor(Date)}: Floor a Date vector
 
-\item \code{POSIXct}: Floor a POSIXct vector
+\item \code{dtt_floor(POSIXct)}: Floor a POSIXct vector
 
-\item \code{hms}: Floor a hms vector
+\item \code{dtt_floor(hms)}: Floor a hms vector
+
 }}
-
 \examples{
 dtt_floor(hms::as_hms("23:59:59"), "hours")
 }
@@ -45,6 +45,7 @@ dtt_floor(hms::as_hms("23:59:59"), "hours")
 Other floor: 
 \code{\link{dtt_date_time}()},
 \code{\link{dtt_date}()},
+\code{\link{dtt_excel_to_date}()},
 \code{\link{dtt_floored}()},
 \code{\link{dtt_set_time}()}
 }

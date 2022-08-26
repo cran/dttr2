@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# dttr2 0.4.1
+
+- Fix HTML attribute.
+- Increase minimum compatible R version to 3.4.
+
 # dttr2 0.4.0
 
 - Added 
