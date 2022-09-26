@@ -1,7 +1,7 @@
-67160a4285091d2ed9c693d61617a41d *DESCRIPTION
+06d70b88fa9e9f50525d1f5329f1ac83 *DESCRIPTION
 5681489d856e788b5885d1042912c4f4 *LICENSE
 f14edd3986a0984491169b60187e248a *NAMESPACE
-d9b28ce4b1524f117dbb9ee4ce32a07c *NEWS.md
+15115a49010ad85a74b8d4154526f7f8 *NEWS.md
 3cba34b55b8c50a1c0f17484aeca9480 *R/add.R
 7f828ef412044e0e97b2c81b074b5e96 *R/aggregate.R
 1580019464cd4cdd67c51424bd2e2921 *R/check.R
@@ -123,7 +123,7 @@ bc6009300271b73b65f4e7c579e929b8 *man/dtt_units.Rd
 a37eb96d88373d574bef8f22190a8d9f *man/dtt_wrap.Rd
 f8a11b67ff48f26355aa698df904d81e *man/dtt_year.Rd
 2ddc18c4fe37426afd6f10bfccff2f68 *man/dtt_year_decimal.Rd
-2d8bc072827fe2f8b6c6d250d495b5b8 *man/dttr2-package.Rd
+03d16e2fce1180471ea68c78905245b6 *man/dttr2-package.Rd
 cb1e46f469cfbbbde29c8b5113e1d789 *man/figures/lifecycle-archived.svg
 c0d2e5a54f1fa4ff02bf9533079dd1f7 *man/figures/lifecycle-defunct.svg
 a1b8c987c676c16af790f563f96cbb1f *man/figures/lifecycle-deprecated.svg
@@ -142,7 +142,7 @@ c3978703d8f40f2679795335715e98f4 *man/figures/lifecycle-experimental.svg
 788595aaf8f123c98317d90320ecf82f *tests/testthat/test-add.R
 2ad9459f0737a6f3f86b0d016292e610 *tests/testthat/test-aggregate.R
 7c77114dd2457c75fb6e0873392bd0fb *tests/testthat/test-base.R
-c5ea6227db6e9f143df8ed128bbfe5e7 *tests/testthat/test-check.R
+98c093e4eabc02905d37331ec0cce5ff *tests/testthat/test-check.R
 1e1c58f898b405931f0bc0ce50b7f393 *tests/testthat/test-chk.R
 1694684646ce1f2f6d8499024254f61b *tests/testthat/test-complete.R
 6ef976191b4e216d58191b72dfafcdd4 *tests/testthat/test-completed.R
