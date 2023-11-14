@@ -1,9 +1,24 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# dttr2 0.5.0
+
+- Adding excel to date time function to package `dtt_excel_to_date_time()`
+
+# dttr2 0.4.2.9002
+
+- Updating tests due POSIXct bug fix
+
+# dttr2 0.4.2.9001
+
+- Updating `dtt_*_from_ints()` functions to handle missing values by setting the whole value to be `NA` if one part is missing 
+
+# dttr2 0.4.2.9000
+
+- added `dtt_date_from_ints()`, `dtt_time_from_ints()` and `dtt_date_time_from_ints()` which create date or time objects from vectors of integers. 
 
 # dttr2 0.4.2
 
 - Same as previous version.
-
 
 # dttr2 0.4.1.9001
 
