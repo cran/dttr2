@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# dttr2 0.5.1
+
+- Housekeeping tasks. 
+- Updated how S3 methods are registered.
+- Update set operators code due to failures on development version of R.
+
+
 # dttr2 0.5.0
 
 - Adding excel to date time function to package `dtt_excel_to_date_time()`
