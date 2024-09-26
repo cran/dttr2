@@ -1,6 +1,6 @@
 Package: dttr2
 Title: Manipulate Date, POSIXct and hms Vectors
-Version: 0.5.1
+Version: 0.5.2
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", role = "aut",
            comment = c(ORCID = "0000-0002-7683-4592")),
@@ -25,10 +25,10 @@ Encoding: UTF-8
 Language: en-US
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2024-09-13 18:20:19 UTC; aylapearson
+Packaged: 2024-09-25 23:40:09 UTC; aylapearson
 Author: Joe Thorley [aut] (<https://orcid.org/0000-0002-7683-4592>),
   Ayla Pearson [aut, cre] (<https://orcid.org/0000-0001-7388-1222>),
   Poisson Consulting [cph, fnd]
 Maintainer: Ayla Pearson <ayla@poissonconsulting.ca>
 Repository: CRAN
-Date/Publication: 2024-09-13 18:40:02 UTC
+Date/Publication: 2024-09-26 00:00:02 UTC
